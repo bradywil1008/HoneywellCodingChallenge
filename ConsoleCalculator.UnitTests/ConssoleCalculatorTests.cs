@@ -78,5 +78,33 @@ namespace Honeywell.CodingChallenge.UnitTests
             // assert
             Assert.AreEqual<double>(expected, Math.Round(actual, 4));
         }
+
+        [TestMethod]
+        public void GetCalculatedResults_With1Op_AdditionWithPI()
+        {
+            // arrange
+            double expected = 14.1416;
+
+            //act 
+            ICalculator calculator = new ConsoleCalculator("PI+11");
+            double actual = calculator.GetCalculatedResults();
+
+            // assert
+            Assert.AreEqual<double>(expected, Math.Round(actual, 4));
+        }
+
+        [TestMethod]
+        public void GetCalculatedResults_With1Op_AdditionWithE()
+        {
+            // arrange
+            double expected = 8.1548;
+
+            //act 
+            ICalculator calculator = new ConsoleCalculator("E*3");
+            double actual = calculator.GetCalculatedResults();
+
+            // assert
+            Assert.AreEqual<double>(expected, Math.Round(actual, 4));
+        }
     }
 }
