@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using System.Diagnostics;
 
-namespace Honeywell.CodingChallenge.ConsoleCalculator
+namespace Honeywell.CodingChallenge
 {
     class Program
     {

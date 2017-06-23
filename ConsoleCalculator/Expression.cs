@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Honeywell.CodingChallenge.ConsoleCalculator
+namespace Honeywell.CodingChallenge
 {
     public class Expression : IExpression
     {
