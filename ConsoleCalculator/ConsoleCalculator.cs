@@ -38,7 +38,7 @@ namespace Honeywell.CodingChallenge.ConsoleCalculator
         /// <summary>
         /// Gets/sets the input for calculation.
         /// </summary>
-        public virtual string Equation { get; set; }
+        public virtual string Equation { get; set; }        
         /// <summary>
         /// Gets/sets the sub-equations in order of operation.
         /// </summary>
@@ -80,7 +80,8 @@ namespace Honeywell.CodingChallenge.ConsoleCalculator
                 throw new ArgumentException("Please enter a valid equation.  Equation can't be null or empty.");
                             
             ASCIIEncoding ascii = new ASCIIEncoding();
-            byte[] asciiCodes = ascii.GetBytes(this.Equation);
+            string equation = this.Equation.StartsWith("-") ? String.Format("0{0}", this.Equation) : this.Equation;
+            byte[] asciiCodes = ascii.GetBytes(equation);
             StringBuilder builder = new StringBuilder();
                         
             try
